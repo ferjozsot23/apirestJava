@@ -1,8 +1,18 @@
 package com.epn.grupo6.rest.entity;
-//@Entity
+
+import jakarta.persistence.*;
+
+@Entity
 public class Libro {
+    // Atributo 1
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    // Atributo 2
+    @Column
     private String nombre;
+    // Atributo 3
+    @Column
     private int numeroPaginas;
 
     public long getId() {
